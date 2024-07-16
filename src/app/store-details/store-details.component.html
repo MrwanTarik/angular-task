@@ -1,0 +1,86 @@
+<h2 class="text-[18px] text-black pb-[15px] border-b px-4">
+  بيانات المتجر / المتجر الالكترونى
+</h2>
+<div
+  class="grid grid-cols-12 gap-x-[10px] gap-y-[15px] my-[20px] px-4  pb-6"
+>
+  <div class="col-span-4 flex flex-col">
+    <label for="storeDownloadLink" class="text-[16px] text-black mb-2">
+      رابط المتجر/ رابط تحميل التطبيق
+    </label>
+    <input
+      type="text"
+      class="bg-transparent p-[6px] rounded-md text-gray-400 border-solid border-[2px]"
+      id="storeDownloadLink"
+      placeholder="رابط المتجر/ رابط تحميل التطبيق"
+    />
+  </div>
+  <div class="col-span-4 flex flex-col">
+    <label class="text-[16px] text-black mb-2">المنطقة </label>
+    <select
+      class="bg-transparent p-[6px] rounded-md text-gray-400 border-solid border-[2px]"
+      title="region"
+
+    >
+      <option selected value="">اضافة المنطقة </option>
+      <option value="governmental">حكوميه</option>
+    </select>
+  </div>
+  <div class="col-span-4 flex flex-col">
+    <label class="text-[16px] text-black mb-2">المدينه </label>
+    <select
+      class="bg-transparent p-[6px] rounded-md text-gray-400 border-solid border-[2px]"
+      title="region"
+
+    >
+      <option selected value=""> اضافة المدينه </option>
+      <option value="governmental">حكوميه</option>
+    </select>
+  </div>
+  <div class="col-span-4 flex flex-col">
+    <label for="partnerSlogan" class="text-[16px] text-black mb-2">
+      شعار الشريك
+    </label>
+    <input
+      type="file"
+      class="bg-transparent p-[6px] rounded-md text-gray-400 border-solid border-[2px]"
+      id="partnerSlogan"
+    />
+  </div>
+  <div class="col-span-4 flex flex-col">
+    <label for="partnerReport" class="text-[16px] text-black mb-2">
+      خطاب الشريك
+    </label>
+    <input
+      type="file"
+      class="bg-transparent p-[6px] rounded-md text-gray-400 border-solid border-[2px]"
+      id="partnerReport"
+      placeholder="ارفق النموذج بامتداد PDF"
+    />
+  </div>
+  <div class="col-span-4 flex flex-col">
+    <label class="text-[16px] text-black mb-2">حال الشريك </label>
+    <div class="flex items-center gap-x-[20px] mt-4">
+      <div class="flex gap-x-[10px]">
+        <input
+          class="mt-[6px]"
+          id="partnerActivated"
+          type="radio"
+          value="activated"
+          name="partnerActivation"
+        />
+        <label for="partnerActivated">مفعل  </label>
+      </div>
+      <div class="flex gap-x-[10px]">
+        <input
+          class="mt-[6px]"
+          id="partnerNonActivated"
+          type="radio"
+          name="partnerActivation"
+          value="nonActivate"
+        />
+        <label for="partnerNonActivated"> معطل </label>
+      </div>
+    </div>
+  </div>
+</div>
