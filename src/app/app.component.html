@@ -155,6 +155,7 @@
         اضف بيانات الفرع
       </h2>
       <div
+        *ngFor="let branch of branchDetails; let i = index"
         class="grid grid-cols-12 gap-x-[10px] gap-y-[15px] my-[20px] px-4 border-b pb-6"
       >
         <div class="col-span-3 flex flex-col">
@@ -195,9 +196,18 @@
             حدد الموقع
           </button>
           <button
+          *ngIf="branchDetails.length <= i + 1"
+            (click)="addNewRow($event)"
             class="w-[50%] text-black bg-[#ddd] rounded-lg text-[14px] h-[39px]"
           >
             اضف فرع اخر
+          </button>
+          <button
+            *ngIf="branchDetails.length > i + 1"
+            (click)="deleteRow($event, branch.id)"
+            class="w-[50%] text-black bg-[#ddd] rounded-lg text-[14px] h-[39px]"
+          >
+            حذف
           </button>
         </div>
       </div>
