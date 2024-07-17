@@ -59,7 +59,7 @@
                 class="mt-[6px]"
                 id="commerceApp"
                 name="firstDepartment"
-                (change)="onCheckDepartmentTwo($event)"
+                (change)="onCheckCommerceApp($event)"
                 type="checkbox"
                 value="commerceApp"
               />
@@ -70,7 +70,7 @@
                 class="mt-[6px]"
                 name="secondDepartment"
                 id="commercialBranch"
-                (change)="onCheckDepartmentOne($event)"
+                (change)="onCheckCommercialBranch($event)"
                 type="checkbox"
                 value="commercialBranch"
               />
@@ -203,6 +203,7 @@
             اضف فرع اخر
           </button>
           <button
+            [class.remove] = "branchDetails.length > i + 1"
             *ngIf="branchDetails.length > i + 1"
             (click)="deleteRow($event, branch.id)"
             class="w-[50%] text-black bg-[#ddd] rounded-lg text-[14px] h-[39px]"

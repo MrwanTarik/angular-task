@@ -12,6 +12,7 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+
   showBranchDetails: boolean = true;
   showCommerceDetails: boolean = true;
   branchDetails: Array<any> = [
@@ -19,7 +20,8 @@ export class AppComponent {
       id: Math.random() * 10000,
     },
   ];
-  onCheckDepartmentOne(event: Event) {
+
+  onCheckCommercialBranch(event: Event) {
     const checkbox = event.target as HTMLInputElement;
 
     if (checkbox.checked) {
@@ -28,7 +30,8 @@ export class AppComponent {
       this.showBranchDetails = true;
     }
   }
-  onCheckDepartmentTwo(event: Event) {
+
+  onCheckCommerceApp(event: Event) {
     const checkbox = event.target as HTMLInputElement;
     if (checkbox.checked) {
       this.showCommerceDetails = false;
@@ -36,12 +39,14 @@ export class AppComponent {
       this.showCommerceDetails = true;
     }
   }
+
   addNewRow(event: Event) {
     event.preventDefault();
     this.branchDetails.push({
       id: Math.random() * 10000,
     });
   }
+
   deleteRow(event: Event, id: number) {
     event.preventDefault();
     this.branchDetails = this.branchDetails.filter((branch) => {
