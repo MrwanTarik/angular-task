@@ -1,7 +1,32 @@
 .section-header {
   font-size: 18px;
 }
+.form-label {
+  font-size: 18px;
+}
+.location-btn {
+  width: 50%;
+  height: 39px;
+  font-size: 14px;
+}
+.branch-btn,
+.delete-btn {
+  height: 39px;
+  font-size: 14px;
+  width: -webkit-fill-available;
+}
 
+.add-partner-btn {
+  width: 200px;
+  border-color: #198754;
+  background-color: white;
+  color: #198754;
+}
+.cancel-btn {
+  width: 60px;
+  background-color: #f4f8ff;
+  color: black;
+}
 .hide {
   display: none;
 }
