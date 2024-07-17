@@ -34,3 +34,39 @@
   background-color: crimson;
   color: white;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.936);
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]::before,
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  border-radius: 2px;
+  height: 10px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #5ccc5b;
+}
+input[type="radio"]::before {
+  border-radius: 4px;
+  width: 9px;
+  height: 9px;
+}
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
